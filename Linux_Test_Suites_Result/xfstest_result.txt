@@ -4,16 +4,15 @@
 
 [Environment]
  x86_64
- kernel 5.4
- cifsd commit 1a5fd32
+ kernel 5.5
+ RAM 8G
+ ksmbd-next, commit 86c3833
 
 [smb3]
  FSTYP=cifs
  TEST_DEV=//your-server/your-share
  TEST_DIR=/mnt/test
  TEST_FS_MOUNT_OPTIONS='-ousername=test,noperm,vers=3.11,mfsymlinks,actimeo=0,password=testpass,sec=ntlmv2'
-[Test Result Summary]
- Current PASS Count / TOTAL Testcase Count : 74 / 83
 
 * xfstests test detail
       |
@@ -74,7 +73,7 @@
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
       |     |- 070
-      |     |   |- [smb3] : TIME OVER
+      |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
       |     |- 074
       |     |   |- [smb3] : PASS
@@ -182,7 +181,7 @@
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
       |     |- 263
-      |     |   |- [smb3] : PASS
+      |     |   |- [smb3] : FAIL
       |     |   |- [cifs] :
       |     |- 285
       |     |   |- [smb3] : FAIL
@@ -230,16 +229,16 @@
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
       |     |- 436
-      |     |   |- [smb3] : FAIL
+      |     |   |- [smb3] : NOT RUN
       |     |   |- [cifs] :
       |     |- 437
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
       |     |- 438
-      |     |   |- [smb3] : TIME OVER
+      |     |   |- [smb3] : FAIL(Cannot fallocate: Bad file descriptor)
       |     |   |- [cifs] :
       |     |- 445
-      |     |   |- [smb3] : FAIL
+      |     |   |- [smb3] : NOT RUN
       |     |   |- [cifs] :
       |     |- 448
       |     |   |- [smb3] : PASS
