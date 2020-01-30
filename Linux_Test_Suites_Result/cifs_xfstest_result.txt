@@ -1,0 +1,311 @@
+================================================================================
+ * XFSTESTS TEST RESULT
+================================================================================\
+
+[Environment]
+ x86_64
+ kernel 5.5
+ RAM 8G
+ ksmbd-next, commit cac5837
+
+[smb3]
+ FSTYP=cifs
+ TEST_DEV=//your-server/your-share
+ TEST_DIR=/mnt/test
+ TEST_FS_MOUNT_OPTIONS='-ousername=test,noperm,vers=3.11,mfsymlinks,actimeo=0,password=testpass,sec=ntlmv2'
+
+* xfstests test detail
+      |
+      |- cifs
+      |     |- 001
+      |         |- [smb3] : PASS
+      |         |- [cifs] :
+      |- generic
+      |     |- 001
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 002
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 005
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 006
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 007
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 010
+      |     |   |- [smb3] : NOT RUN
+      |     |   |- [cifs] : PASS
+      |     |- 011
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 013
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 014
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 020
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 023
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 024
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 028
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 029
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 030
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 032
+      |     |   |- [smb3] : NOT RUN
+      |     |   |- [cifs] : PASS
+      |     |- 033
+      |     |   |- [smb3] : NOT RUN
+      |     |   |- [cifs] : PASS
+      |     |- 036
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 037
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 069
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 070
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 074
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 080
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 084
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 086
+      |     |   |- [smb3] : NOT RUN
+      |     |   |- [cifs] : PASS
+      |     |- 091
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 095
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 098
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 100
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 109
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 113
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 117
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 124
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 125
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 129
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 130
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 132
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 133
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 135
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 141
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 169
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 198
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 207
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 208
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 210
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 211
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 212
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 213
+      |     |   |- [smb3] : NOT RUN
+      |     |   |- [cifs] : PASS
+      |     |- 214
+      |     |   |- [smb3] : NOT RUN
+      |     |   |- [cifs] : PASS
+      |     |- 215
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 221
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 239
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 245
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 246
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 248
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 249
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 257
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 258
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 286
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 308
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 309
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 310
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 313
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 315
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 339
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 340
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 344
+      |     |   |- [smb3] : FAIL
+      |     |   |- [cifs] : PASS
+      |     |- 345
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 346
+      |     |   |- [smb3] : FAIL
+      |     |   |- [cifs] : PASS
+      |     |- 349
+      |     |   |- [smb3] : NOT RUN
+      |     |   |- [cifs] : PASS
+      |     |- 350
+      |     |   |- [smb3] : NOT RUN
+      |     |   |- [cifs] : PASS
+      |     |- 354
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 378
+      |     |   |- [smb3] : FAIL
+      |     |   |- [cifs] : PASS
+      |     |- 391
+      |     |   |- [smb3] : NOT RUN
+      |     |   |- [cifs] : PASS
+      |     |- 393
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 394
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 406
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 412
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 420
+      |     |   |- [smb3] : FAIL
+      |     |   |- [cifs] : PASS
+      |     |- 422
+      |     |   |- [smb3] : FAIL
+      |     |   |- [cifs] : PASS
+      |     |- 428
+      |     |   |- [smb3] : FAIL
+      |     |   |- [cifs] : PASS
+      |     |- 432
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 433
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 437
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 439
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 443
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 446
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 450
+      |     |   |- [smb3] : NOT RUN
+      |     |   |- [cifs] : PASS
+      |     |- 451
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 452
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 460
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 464
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 465
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 504
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 524
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 533
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
