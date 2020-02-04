@@ -40,10 +40,10 @@
       |     |   |- [smb3] : NOT RUN
       |     |   |- [cifs] : PASS
       |     |- 011
-      |     |   |- [smb3] : PASS
+      |     |   |- [smb3] : PASS, TIME OVER(oplock)
       |     |   |- [cifs] :
       |     |- 013
-      |     |   |- [smb3] : PASS
+      |     |   |- [smb3] : PASS, TIME OVER(oplock)
       |     |   |- [cifs] :
       |     |- 014
       |     |   |- [smb3] : PASS
@@ -70,7 +70,7 @@
       |     |   |- [smb3] : NOT RUN
       |     |   |- [cifs] : PASS
       |     |- 033
-      |     |   |- [smb3] : NOT RUN
+      |     |   |- [smb3] : NOT RUN, PASS(oplock)
       |     |   |- [cifs] : PASS
       |     |- 036
       |     |   |- [smb3] : PASS
@@ -87,6 +87,9 @@
       |     |- 074
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
+      |     |- 075(*)
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
       |     |- 080
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
@@ -97,7 +100,7 @@
       |     |   |- [smb3] : NOT RUN
       |     |   |- [cifs] : PASS
       |     |- 091
-      |     |   |- [smb3] : PASS
+      |     |   |- [smb3] : PASS, FAIL(oplock)
       |     |   |- [cifs] :
       |     |- 095
       |     |   |- [smb3] : PASS
@@ -111,6 +114,9 @@
       |     |- 109
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
+      |     |- 112(*)
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
       |     |- 113
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
@@ -122,6 +128,9 @@
       |     |   |- [cifs] :
       |     |- 125
       |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 127(*)
+      |     |   |- [smb3] : TIME OVER
       |     |   |- [cifs] :
       |     |- 129
       |     |   |- [smb3] : PASS
@@ -183,6 +192,9 @@
       |     |- 246
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
+      |     |- 247
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
       |     |- 248
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
@@ -194,6 +206,12 @@
       |     |   |- [cifs] :
       |     |- 258
       |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 263(*)
+      |     |   |- [smb3] : FAIL
+      |     |   |- [cifs] :
+      |     |- 285(*)
+      |     |   |- [smb3] : FAIL
       |     |   |- [cifs] :
       |     |- 286
       |     |   |- [smb3] : PASS
@@ -213,6 +231,9 @@
       |     |- 315
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
+      |     |- 323(*)
+      |     |   |- [smb3] : FAIL
+      |     |   |- [cifs] :
       |     |- 339
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
@@ -220,13 +241,13 @@
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
       |     |- 344
-      |     |   |- [smb3] : FAIL
+      |     |   |- [smb3] : FAIL, PASS(oplock)
       |     |   |- [cifs] : PASS
       |     |- 345
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
       |     |- 346
-      |     |   |- [smb3] : FAIL
+      |     |   |- [smb3] : PASS
       |     |   |- [cifs] : PASS
       |     |- 349
       |     |   |- [smb3] : NOT RUN
@@ -235,6 +256,9 @@
       |     |   |- [smb3] : NOT RUN
       |     |   |- [cifs] : PASS
       |     |- 354
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 360(*)
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
       |     |- 378
@@ -262,7 +286,7 @@
       |     |   |- [smb3] : FAIL
       |     |   |- [cifs] : PASS
       |     |- 428
-      |     |   |- [smb3] : FAIL
+      |     |   |- [smb3] : FAIL, PASS(oplock)
       |     |   |- [cifs] : PASS
       |     |- 432
       |     |   |- [smb3] : PASS
@@ -270,8 +294,14 @@
       |     |- 433
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
+      |     |- 436(*)
+      |     |   |- [smb3] : NOT RUN
+      |     |   |- [cifs] :
       |     |- 437
       |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 438(*)
+      |     |   |- [smb3] : FAIL
       |     |   |- [cifs] :
       |     |- 439
       |     |   |- [smb3] : PASS
@@ -279,11 +309,17 @@
       |     |- 443
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
+      |     |- 445(*)
+      |     |   |- [smb3] : NOT RUN
+      |     |   |- [cifs] :
       |     |- 446
+      |     |   |- [smb3] : PASS, TIME OVER(oplock)
+      |     |   |- [cifs] :
+      |     |- 448(*)
       |     |   |- [smb3] : PASS
       |     |   |- [cifs] :
       |     |- 450
-      |     |   |- [smb3] : NOT RUN
+      |     |   |- [smb3] : NOT RUN, PASS(oplock)
       |     |   |- [cifs] : PASS
       |     |- 451
       |     |   |- [smb3] : PASS
@@ -299,6 +335,12 @@
       |     |   |- [cifs] :
       |     |- 465
       |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 469(*)
+      |     |   |- [smb3] : PASS
+      |     |   |- [cifs] :
+      |     |- 476(*)
+      |     |   |- [smb3] : TIME OVER
       |     |   |- [cifs] :
       |     |- 504
       |     |   |- [smb3] : PASS
